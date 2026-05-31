@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    color: #e8e4df;
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.logo {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #9C4EDE;
+    border-radius: 50%;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.25; }
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 5rem 3rem 4rem;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #e8e4df;
+}
+
+h1 em {
+    font-style: italic;
+    color: #9C4EDE;
+}
+
+.desc {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: rgba(255,255,255,0.45);
+}
+
+.desc strong {
+    color: #9C4EDE;
+    font-weight: 400;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #9C4EDE;
+}
+
+main img {
+    width: 180px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    filter: grayscale(30%);
+    border-left: 2px solid #9C4EDE;
+    transition: filter 0.4s;
+}
+
+main img:hover {
+    filter: grayscale(0%);
+}
+
+/* rodapé */
+footer {
+    padding: 1.2rem 3rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header, footer { padding: 1.2rem 1.5rem; }
+    main { padding: 3rem 1.5rem; }
+    header { flex-direction: column; gap: 0.5rem; text-align: center; }
+    footer { flex-direction: column; gap: 0.5rem; }
+}
