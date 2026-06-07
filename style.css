@@ -17,7 +17,7 @@ body {
 }
 
 .apresentacao { 
-    margin: 10%;
+    margin: 10% 15%;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -25,6 +25,9 @@ body {
 
 .apresentacao__conteudo { 
     width: 615px; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .apresentacao__titulo { 
@@ -39,18 +42,28 @@ body {
 
 .apresentacao__links {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
 }
 
+.apresentacao__links__subtitulo { 
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+
 .apresentacao__links__link { 
-    background-color: #9C4EDE;    
-    width: 280px;
+    border: 2px solid #9C4EDE;    
+    width: 378px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
     font-size: 24px;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
     font-family: "Montserrat", sans-serif;
 }
